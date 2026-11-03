@@ -37,8 +37,6 @@ class NavbarController extends EmitterController
      */
     public function notificationsAction($max = null): Response
     {
-        @trigger_error('NavbarController::notificationsAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         if (!$this->hasListener(NotificationListEvent::class)) {
             return new Response();
         }
@@ -65,8 +63,6 @@ class NavbarController extends EmitterController
      */
     public function messagesAction($max = null): Response
     {
-        @trigger_error('NavbarController::messagesAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         if (!$this->hasListener(MessageListEvent::class)) {
             return new Response();
         }
@@ -93,8 +89,6 @@ class NavbarController extends EmitterController
      */
     public function tasksAction($max = null): Response
     {
-        @trigger_error('NavbarController::tasksAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         if (!$this->hasListener(TaskListEvent::class)) {
             return new Response();
         }
@@ -120,8 +114,6 @@ class NavbarController extends EmitterController
      */
     public function userAction(): Response
     {
-        @trigger_error('NavbarController::userAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         if (!$this->hasListener(NavbarUserEvent::class)) {
             return new Response();
         }

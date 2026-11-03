@@ -19,8 +19,6 @@ final class SidebarController extends EmitterController
 {
     public function userPanelAction(): Response
     {
-        @trigger_error('SidebarController::userPanelAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         if (!$this->hasListener(SidebarUserEvent::class)) {
             return new Response();
         }
@@ -38,15 +36,11 @@ final class SidebarController extends EmitterController
 
     public function searchFormAction(): Response
     {
-        @trigger_error('SidebarController::searchFormAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         return $this->render('@AdminLTE/Sidebar/search-form.html.twig', []);
     }
 
     public function menuAction(Request $request): Response
     {
-        @trigger_error('SidebarController::menuAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         if (!$this->hasListener(SidebarMenuEvent::class)) {
             return new Response();
         }

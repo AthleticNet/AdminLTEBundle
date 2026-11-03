@@ -32,8 +32,6 @@ class BreadcrumbController extends EmitterController
      */
     public function breadcrumbAction(Request $request): Response
     {
-        @trigger_error('BreadcrumbController::breadcrumbAction() is deprecated and will be removed with 4.0', E_USER_DEPRECATED);
-
         if (!$this->hasListener(BreadcrumbMenuEvent::class)) {
             return new Response();
         }
